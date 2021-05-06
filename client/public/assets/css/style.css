@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%;
+
+	background: #8e2de2;
+	background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
