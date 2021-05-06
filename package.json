@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "A full-stack project for a theoretical health care company. The goal is to launch a full stack web app that is mobile friendly, a commercial caliber UI for professional use, a user friendly UI for clients/patients. It will also use a multi model database that shares information between models but limits visibility of other infromation. Ultimately, this project should show three things in terms of our ability: creativity, practical/professional application of skills, and our ability to use data in multiple and intricate ways.",
 	"scripts": {
+		"start": "concurrently \"npm run start:client\" \"npm run start:server\"",
 		"start:client": "cd client && npm start",
 		"start:server": "cd server && npm start"
 	},
@@ -13,5 +14,8 @@
 	"bugs": {
 		"url": "https://github.com/daveyrojo/healthcare-llc/issues"
 	},
-	"homepage": "https://github.com/daveyrojo/healthcare-llc#readme"
+	"homepage": "https://github.com/daveyrojo/healthcare-llc#readme",
+	"dependencies": {
+		"concurrently": "^6.0.2"
+	}
 }
