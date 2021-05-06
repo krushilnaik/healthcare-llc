@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-import "./App.css";
 
 function App() {
 	return (
 		<Fragment>
-			<noscript>You need to enable JavaScript to run this app.</noscript>
+			<main>
+				<div>HealthCare, LLC.</div>
+			</main>
 		</Fragment>
 	);
 }
