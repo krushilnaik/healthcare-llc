@@ -10,24 +10,4 @@ body {
 	width: 100vw;
 	height: 100vh;
 	max-width: 100%;
-
-	background: #8e2de2;
-	background: linear-gradient(to right, #4a00e0, #8e2de2);
-	background-size: 200% 200%;
-
-	animation: animateBackground 5s infinite;
-}
-
-@keyframes animateBackground {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
 }

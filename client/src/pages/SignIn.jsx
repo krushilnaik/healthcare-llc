@@ -16,7 +16,7 @@ function SignIn() {
 	};
 
 	return (
-		<main>
+		<main id='sign-in'>
 			<form action='POST'>
 				<h1>Sign in</h1>
 

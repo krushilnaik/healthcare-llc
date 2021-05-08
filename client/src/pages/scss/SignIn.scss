@@ -2,102 +2,109 @@ $duration: 0.4s;
 $form-height: 450px;
 $form-width: 400px;
 
-form {
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+#sign-in {
+	background: #8e2de2;
+	background: linear-gradient(to right, #4a00e0, #8e2de2);
+	background-size: 200% 200%;
 
-	animation: zoomIn $duration;
+	animation: animateBackground 5s infinite;
 
-	padding: 10%;
-	border-radius: 5px;
-	background-color: rgba(63, 73, 73, 0.747);
-	height: $form-height;
-	width: $form-width;
-	box-shadow: 1px 1px 3px rgba($color: black, $alpha: 0.5);
+	form {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
 
-	justify-items: stretch;
-	align-items: center;
+		animation: zoomIn $duration;
 
-	* {
-		animation: fadeIn $duration * 2;
-	}
+		padding: 10%;
+		border-radius: 5px;
+		background-color: rgba(67, 78, 78, 0.911);
+		height: $form-height;
+		width: $form-width;
+		box-shadow: 1px 1px 3px rgba($color: black, $alpha: 0.5);
 
-	h1 {
-		font-family: sans-serif;
-		color: honeydew;
-		text-align: center;
-		font-size: $form-width * 0.12;
-		align-self: flex-start;
-	}
-
-	input,
-	button[type="submit"] {
-		height: 50%;
-	}
-
-	.input-wrapper {
-		height: 50%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
+		justify-items: stretch;
 		align-items: center;
-		position: relative;
 
-		&:hover,
-		&:focus {
-			&::before {
-				content: "";
-				width: 100%;
-				height: 2px;
-				background-color: cadetblue;
-
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				z-index: 50000;
-
-				animation: hoverUnderline 200ms;
-			}
+		* {
+			animation: fadeIn $duration * 2;
 		}
 
-		input {
-			background-color: transparent;
-			border: none;
-			border-bottom: solid 1px grey;
-			font-size: 16px;
-			outline: none;
-			transition: 200ms;
-			z-index: 1;
-			width: 100%;
-			height: 100%;
+		h1 {
+			font-family: sans-serif;
+			color: honeydew;
+			text-align: center;
+			font-size: $form-width * 0.12;
+			align-self: flex-start;
+		}
 
+		input,
+		button[type="submit"] {
+			height: 50%;
+		}
+
+		.input-wrapper {
+			height: 50%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			position: relative;
 
 			&:hover,
 			&:focus {
-				background-color: rgba($color: aliceblue, $alpha: 0.05);
+				&::before {
+					content: "";
+					width: 100%;
+					height: 2px;
+					background-color: cadetblue;
+
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					z-index: 50000;
+
+					animation: hoverUnderline 200ms;
+				}
 			}
 
-			&::placeholder {
-				color: honeydew;
+			input {
+				background-color: transparent;
+				border: none;
+				border-bottom: solid 1px grey;
+				font-size: 16px;
+				outline: none;
+				transition: 200ms;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+
+				position: relative;
+
+				&:hover,
+				&:focus {
+					background-color: rgba($color: aliceblue, $alpha: 0.05);
+				}
+
+				&::placeholder {
+					color: honeydew;
+				}
 			}
 		}
-	}
 
-	button {
-		border-radius: 7px;
-		border: solid 2px cadetblue;
-		background-color: transparent;
-		font-size: 100%;
-		font-weight: bold;
-		color: honeydew;
-		transition: 200ms;
+		button {
+			border-radius: 7px;
+			border: solid 2px cadetblue;
+			background-color: transparent;
+			font-size: 100%;
+			font-weight: bold;
+			color: honeydew;
+			transition: 200ms;
 
-		&:hover {
-			cursor: pointer;
-			background-color: cadetblue;
-			border-color: rgba($color: honeydew, $alpha: 0.5);
-			// color: black;
+			&:hover {
+				cursor: pointer;
+				background-color: cadetblue;
+				border-color: rgba($color: rgb(104, 104, 104), $alpha: 0.5);
+			}
 		}
 	}
 }
@@ -137,5 +144,19 @@ form {
 
 	100% {
 		width: 100%;
+	}
+}
+
+@keyframes animateBackground {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
 	}
 }
