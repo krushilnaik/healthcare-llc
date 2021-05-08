@@ -1,18 +1,12 @@
-import React, { Fragment, useEffect } from "react";
-import axios from "axios";
+import React, { Fragment } from "react";
 
 import "./App.scss";
+import SignIn from "./pages/SignIn";
 
 function App() {
-	useEffect(() => {
-		axios.get("/auth").then(({ data }) => console.log(data));
-	});
-
 	return (
 		<Fragment>
-			<main>
-				<h1>HealthCare, LLC.</h1>
-			</main>
+			<SignIn />
 		</Fragment>
 	);
 }
