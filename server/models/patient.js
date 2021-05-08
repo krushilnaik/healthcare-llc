@@ -44,17 +44,17 @@ PatientSchema.methods = {
 	}
 };
 
-PatientSchema.pre("save", function (next) {
-	console.log("patientSchema.pre('save'): ", this);
-	if (!this.password) {
-		console.log("no password!");
-		next();
-	} else {
-		console.log("pre saved");
-		this.password = this.hashPassword(this.password);
-	}
-	next();
-});
+// PatientSchema.pre("save", function (next) {
+// 	console.log("patientSchema.pre('save'): ", this);
+// 	if (!this.password) {
+// 		console.log("no password!");
+// 		next();
+// 	} else {
+// 		console.log("pre saved");
+// 		this.password = this.hashPassword(this.password);
+// 	}
+// 	next();
+// });
 
 const Patient = mongoose.model("Patient", PatientSchema);
 
